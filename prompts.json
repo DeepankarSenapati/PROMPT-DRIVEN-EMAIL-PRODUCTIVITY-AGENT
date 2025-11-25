@@ -1,0 +1,39 @@
+{
+  "prompts": {
+    "categorization_v1": {
+      "id": "categorization_v1",
+      "type": "categorization",
+      "template": "Categorize the following email into one of: Important, Newsletter, Spam, To-Do, Project Update. If To-Do, include a short reason explaining what task is required. Respond only with the category name."
+    },
+    "action_extraction_v1": {
+      "id": "action_extraction_v1",
+      "type": "action_extraction",
+      "template": "Extract each explicit task from the email. Respond ONLY in JSON array format: [{\"task\": \"...\", \"deadline\": \"YYYY-MM-DD or null\", \"assignee\": \"null\"}]. If no tasks exist, respond with []."
+    },
+    "draft_prompt_v1": {
+      "id": "draft_prompt_v1",
+      "type": "draft",
+      "template": "You are writing a reply to an email.\n\nORIGINAL EMAIL:\nSubject: {subject}\n\n{email}\n\nTASK: Write a {tone} reply. Keep it {length}. Include next steps if needed.\n\nWrite ONLY the reply email below (no explanations):"
+    },  
+    "summarization_v1": {
+      "id": "summarization_v1",
+      "type": "summarization",
+      "template": "Summarize the following email in {length} detail (length options: short, medium, detailed). Email body: {email}"
+    },
+    "qa_agent_v1": {
+      "id": "qa_agent_v1",
+      "type": "qa",
+      "template": "You are an assistant answering questions about the following email. Be concise and cite the sentence(s) in the email that support your short answer. Email: {email}\nQuestion: {question}"
+    },
+    "intent_detection_v1": {
+      "id": "intent_detection_v1",
+      "type": "intent_detection",
+      "template": "You are an intent classifier. Given the user message, classify intent as one of: summarize, extract_actions, draft_reply, search, list_actions, other. Respond with a single JSON: {\"intent\":\"...\",\"params\":{}}. Params may include email_id, query, tone, length."
+    },
+    "rewrite_tone_v1": {
+      "id": "rewrite_tone_v1",
+      "type": "rewrite",
+      "template": "Rewrite the following text to have a {tone} tone and {length} length. Text: {email}"
+    }
+  }
+}

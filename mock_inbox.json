@@ -1,0 +1,183 @@
+[ 
+  {
+    "id": "email_001",
+    "sender": "alice.johnson@company.com",
+    "to": "you@company.com",
+    "subject": "Project Sync Meeting Request",
+    "timestamp": "2025-10-12T09:30:00",
+    "body": "Hi, can we schedule a 30-minute sync this Wednesday to review the backend API progress? Let me know your availability.",
+    "thread_id": "thread_001"
+  },
+  {
+    "id": "email_002",
+    "sender": "newsletter@techdaily.com",
+    "to": "you@company.com",
+    "subject": "TechDaily Weekly Recap",
+    "timestamp": "2025-10-11T14:20:00",
+    "body": "This week in tech: AI breakthroughs, cybersecurity updates, and new developer tools. Read more in our featured articles.",
+    "thread_id": "thread_002"
+  },
+  {
+    "id": "email_003",
+    "sender": "no-reply@randomwindeals.net",
+    "to": "you@company.com",
+    "subject": "Claim Your Free Gift Card!",
+    "timestamp": "2025-10-10T18:00:00",
+    "body": "Congratulations! You've been selected for a free $500 gift card. Click here to redeem. Limited time only.",
+    "thread_id": "thread_003"
+  },
+  {
+    "id": "email_004",
+    "sender": "manager@company.com",
+    "to": "you@company.com",
+    "subject": "Important Task: Q4 Market Report",
+    "timestamp": "2025-10-12T11:10:00",
+    "body": "Please prepare the Q4 competitor analysis report by October 20th. Include pricing updates and customer segmentation.",
+    "thread_id": "thread_004"
+  },
+  {
+    "id": "email_005",
+    "sender": "rajiv.mehta@company.com",
+    "to": "you@company.com",
+    "subject": "Product Launch Update",
+    "timestamp": "2025-10-13T08:45:00",
+    "body": "The product launch timeline has been updated. We are moving the release to November 5th. Please update your documentation.",
+    "thread_id": "thread_005"
+  },
+  {
+    "id": "email_006",
+    "sender": "hr@company.com",
+    "to": "you@company.com",
+    "subject": "HR Roundtable Meeting",
+    "timestamp": "2025-10-09T10:00:00",
+    "body": "You are invited to the HR roundtable on Friday to discuss new workplace policies. Please confirm your attendance.",
+    "thread_id": "thread_006"
+  },
+  {
+    "id": "email_007",
+    "sender": "updates@codingmonthly.com",
+    "to": "you@company.com",
+    "subject": "Coding Monthly: New JavaScript Trends",
+    "timestamp": "2025-10-08T16:40:00",
+    "body": "Discover new JavaScript optimization techniques and frameworks. Read this month's featured tutorials and insights.",
+    "thread_id": "thread_007"
+  },
+  {
+    "id": "email_008",
+    "sender": "support@bank-alerts.com",
+    "to": "you@company.com",
+    "subject": "URGENT: Verify Your Account Immediately",
+    "timestamp": "2025-10-12T22:15:00",
+    "body": "Suspicious activity detected. Verify your banking account by clicking the link. Failure may result in account closure.",
+    "thread_id": "thread_008"
+  },
+  {
+    "id": "email_009",
+    "sender": "sarah.kim@company.com",
+    "to": "you@company.com",
+    "subject": "Task Follow-Up: Design Mockups",
+    "timestamp": "2025-10-11T13:00:00",
+    "body": "Hi, can you send the updated design mockups by tomorrow? The team needs them for the review session.",
+    "thread_id": "thread_009"
+  },
+  {
+    "id": "email_010",
+    "sender": "team@productupdates.com",
+    "to": "you@company.com",
+    "subject": "Your Weekly Product Usage Stats",
+    "timestamp": "2025-10-10T07:30:00",
+    "body": "Here is your weekly breakdown of feature usage and customer activity across your product.",
+    "thread_id": "thread_010"
+  },
+  {
+    "id": "email_011",
+    "sender": "ceo.office@company.com",
+    "to": "you@company.com",
+    "subject": "Leadership Townhall Invitation",
+    "timestamp": "2025-10-14T17:20:00",
+    "body": "You are invited to the quarterly leadership townhall this Friday at 4 PM. Attendance is mandatory.",
+    "thread_id": "thread_011"
+  },
+  {
+    "id": "email_012",
+    "sender": "subscribe@healthyliving.news",
+    "to": "you@company.com",
+    "subject": "Healthy Living October Newsletter",
+    "timestamp": "2025-10-14T10:15:00",
+    "body": "This month's wellness tips: morning routines, nutrition guides, and stress reduction strategies.",
+    "thread_id": "thread_012"
+  },
+  {
+    "id": "email_013",
+    "sender": "unknown@weirdpromo.io",
+    "to": "you@company.com",
+    "subject": "Unlock Exclusive Crypto Rewards!",
+    "timestamp": "2025-10-13T21:10:00",
+    "body": "Invest now and multiply your crypto. Guaranteed returns! Don't miss out.",
+    "thread_id": "thread_013"
+  },
+  {
+    "id": "email_014",
+    "sender": "ops.team@company.com",
+    "to": "you@company.com",
+    "subject": "System Migration - Need Your Inputs",
+    "timestamp": "2025-10-15T09:15:00",
+    "body": "We need your compatibility assessment for services affected by next week's system migration. Please send it by Thursday.",
+    "thread_id": "thread_014"
+  },
+  {
+    "id": "email_015",
+    "sender": "charles.brown@company.com",
+    "to": "you@company.com",
+    "subject": "Client Feedback Report Update",
+    "timestamp": "2025-10-15T11:30:00",
+    "body": "Attached is the updated client feedback summary. Please integrate the insights into your presentation.",
+    "thread_id": "thread_015"
+  },
+  {
+    "id": "email_016",
+    "sender": "events@company.com",
+    "to": "you@company.com",
+    "subject": "Team Building Retreat - RSVP",
+    "timestamp": "2025-10-14T08:25:00",
+    "body": "The annual team-building retreat is scheduled for November 12-13. Please RSVP at your earliest convenience.",
+    "thread_id": "thread_016"
+  },
+  {
+    "id": "email_017",
+    "sender": "project.alpha@company.com",
+    "to": "you@company.com",
+    "subject": "Alpha Project - Sprint 3 Updates",
+    "timestamp": "2025-10-10T12:45:00",
+    "body": "Sprint 3 is completed. Key highlights: API integration done, UI bugs resolved, pending load-testing tasks.",
+    "thread_id": "thread_017"
+  },
+  {
+    "id": "email_018",
+    "sender": "marketing@brandnewsletter.com",
+    "to": "you@company.com",
+    "subject": "Top 10 Marketing Trends of 2025",
+    "timestamp": "2025-10-08T11:50:00",
+    "body": "Discover the top marketing strategies driving growth this year, including personalization with AI.",
+    "thread_id": "thread_018"
+  },
+  {
+    "id": "email_019",
+    "sender": "it-security@company.com",
+    "to": "you@company.com",
+    "subject": "Mandatory: Password Rotation Reminder",
+    "timestamp": "2025-10-13T07:00:00",
+    "body": "Please update your system password within the next 48 hours to comply with IT security policy.",
+    "thread_id": "thread_019"
+  },
+  {
+    "id": "email_020",
+    "sender": "maria.gomez@company.com",
+    "to": "you@company.com",
+    "subject": "Need Help With Data Cleaning",
+    "timestamp": "2025-10-15T13:40:00",
+    "body": "Could you help clean and format the sales dataset before the meeting tomorrow? It needs consolidation.",
+    "thread_id": "thread_020"
+  }
+]
+

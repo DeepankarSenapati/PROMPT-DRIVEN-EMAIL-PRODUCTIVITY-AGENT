@@ -1,0 +1,612 @@
+{
+  "deepankar-session-1": {
+    "history": [
+      {
+        "ts": "2025-11-20T20:31:11.417349Z",
+        "role": "user",
+        "text": "Summarize this email",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_001"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:31:11.418348Z",
+        "role": "assistant",
+        "text": "The sender wants to schedule a 30-minute meeting this Wednesday to review backend API progress and is asking for your availability.",
+        "tool_output": {
+          "summary": "The sender wants to schedule a 30-minute meeting this Wednesday to review backend API progress and is asking for your availability."
+        }
+      },
+      {
+        "ts": "2025-11-20T20:32:39.248667Z",
+        "role": "user",
+        "text": "Draft a reply accepting the meeting in a friendly tone",
+        "intent": "draft_reply",
+        "params": {
+          "tone": "friendly",
+          "email_id": "email_003"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:32:39.249738Z",
+        "role": "assistant",
+        "text": "Error invoking tool or LLM: Model returned no extractable text. Diagnostics: {\"note\": \"no extractable text from SDK response\", \"finish_reason\": 2, \"repr\": \"response:\\nGenerateContentResponse(\\n    done=True,\\n    iterator=None,\\n    result=protos.GenerateContentResponse({\\n      \\\"candidates\\\": [\\n        {\\n          \\\"content\\\": {\\n            \\\"role\\\": \\\"model\\\"\\n          },\\n          \\\"finish_reason\\\": \\\"MAX_TOKENS\\\",\\n          \\\"index\\\": 0\\n        }\\n      ],\\n      \\\"usage_metadata\\\": {\\n        \\\"prompt_token_count\\\": 30,\\n        \\\"total_token_count\\\": 541\\n      },\\n      \\\"model_version\\\": \\\"gemini-2.5-flash\\\"\\n    }),\\n)\"}",
+        "tool_output": {
+          "error": "Model returned no extractable text. Diagnostics: {\"note\": \"no extractable text from SDK response\", \"finish_reason\": 2, \"repr\": \"response:\\nGenerateContentResponse(\\n    done=True,\\n    iterator=None,\\n    result=protos.GenerateContentResponse({\\n      \\\"candidates\\\": [\\n        {\\n          \\\"content\\\": {\\n            \\\"role\\\": \\\"model\\\"\\n          },\\n          \\\"finish_reason\\\": \\\"MAX_TOKENS\\\",\\n          \\\"index\\\": 0\\n        }\\n      ],\\n      \\\"usage_metadata\\\": {\\n        \\\"prompt_token_count\\\": 30,\\n        \\\"total_token_count\\\": 541\\n      },\\n      \\\"model_version\\\": \\\"gemini-2.5-flash\\\"\\n    }),\\n)\"}"
+        }
+      }
+    ]
+  },
+  "deepankar-session-2": {
+    "history": [
+      {
+        "ts": "2025-11-20T20:44:19.184465Z",
+        "role": "user",
+        "text": "Draft a reply accepting the meeting in a friendly tone",
+        "intent": "draft_reply",
+        "params": {
+          "tone": "friendly",
+          "email_id": "email_003"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:44:19.186630Z",
+        "role": "assistant",
+        "text": "Hi No-reply,\n\nThanks for the message — I’m available and happy to attend the meeting. Please let me know the exact time that works for you and I’ll confirm. Looking forward to it.\n\nBest regards,\n[Your Name]",
+        "tool_output": {
+          "draft": "Hi No-reply,\n\nThanks for the message — I’m available and happy to attend the meeting. Please let me know the exact time that works for you and I’ll confirm. Looking forward to it.\n\nBest regards,\n[Your Name]"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:45:01.487772Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "list_actions",
+        "params": {
+          "email_id": "email_003"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:45:01.488769Z",
+        "role": "assistant",
+        "text": "Found 13 total actions in processed outputs.",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let me know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "prepare the Q4 competitor analysis report",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_004",
+              "task": "Include pricing updates and customer segmentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_005",
+              "task": "update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "Confirm attendance to the HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "Send the updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend the quarterly leadership townhall",
+              "deadline": "2025-10-17"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by next week's system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate the insights from the updated client feedback summary into your presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "Debraj-session-1": {
+    "history": [
+      {
+        "ts": "2025-11-20T20:48:00.651398Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "list_actions",
+        "params": {
+          "email_id": "email_003"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:48:00.653389Z",
+        "role": "assistant",
+        "text": "Found 13 total actions in processed outputs.",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let me know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "prepare the Q4 competitor analysis report",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_004",
+              "task": "Include pricing updates and customer segmentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_005",
+              "task": "update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "Confirm attendance to the HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "Send the updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend the quarterly leadership townhall",
+              "deadline": "2025-10-17"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by next week's system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate the insights from the updated client feedback summary into your presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T20:49:10.167292Z",
+        "role": "user",
+        "text": "What is the tasks here?",
+        "intent": "list_actions",
+        "params": {
+          "email_id": "email_003"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:49:10.169285Z",
+        "role": "assistant",
+        "text": "Found 13 total actions in processed outputs.",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let me know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "prepare the Q4 competitor analysis report",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_004",
+              "task": "Include pricing updates and customer segmentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_005",
+              "task": "update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "Confirm attendance to the HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "Send the updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend the quarterly leadership townhall",
+              "deadline": "2025-10-17"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by next week's system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate the insights from the updated client feedback summary into your presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T20:49:38.314778Z",
+        "role": "user",
+        "text": "What is the tasks here?",
+        "intent": "list_actions",
+        "params": {
+          "email_id": "email_001"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:49:38.316778Z",
+        "role": "assistant",
+        "text": "Found 13 total actions in processed outputs.",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let me know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "prepare the Q4 competitor analysis report",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_004",
+              "task": "Include pricing updates and customer segmentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_005",
+              "task": "update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "Confirm attendance to the HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "Send the updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend the quarterly leadership townhall",
+              "deadline": "2025-10-17"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by next week's system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate the insights from the updated client feedback summary into your presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "debraj-seesion-2": {
+    "history": [
+      {
+        "ts": "2025-11-20T20:54:59.853262Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "extract_actions",
+        "params": {
+          "email_id": "email_001"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:54:59.856509Z",
+        "role": "assistant",
+        "text": "I extracted 2 action(s).",
+        "tool_output": {
+          "actions": [
+            {
+              "task": "schedule a 30-minute sync to review the backend API progress",
+              "deadline": null,
+              "assignee": null
+            },
+            {
+              "task": "Let me know your availability",
+              "deadline": null,
+              "assignee": null
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T20:56:52.559443Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "extract_actions",
+        "params": {
+          "email_id": "email_002"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:56:52.562449Z",
+        "role": "assistant",
+        "text": "I extracted 0 action(s).",
+        "tool_output": {
+          "actions": []
+        }
+      },
+      {
+        "ts": "2025-11-20T20:57:09.758528Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "extract_actions",
+        "params": {
+          "email_id": "email_004"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:57:09.761529Z",
+        "role": "assistant",
+        "text": "I extracted 1 action(s).",
+        "tool_output": {
+          "actions": [
+            {
+              "task": "Prepare the Q4 competitor analysis report, including pricing updates and customer segmentation",
+              "deadline": "2023-10-20",
+              "assignee": null
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T20:57:53.002439Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "extract_actions",
+        "params": {
+          "email_id": "email_005"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:57:53.005453Z",
+        "role": "assistant",
+        "text": "I extracted 1 action(s).",
+        "tool_output": {
+          "actions": [
+            {
+              "task": "Update documentation",
+              "deadline": null,
+              "assignee": null
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T20:58:51.421344Z",
+        "role": "user",
+        "text": "Find emails about migration",
+        "intent": "search",
+        "params": {
+          "query": "migration"
+        }
+      },
+      {
+        "ts": "2025-11-20T20:58:51.423352Z",
+        "role": "assistant",
+        "text": "Found 1 matching emails.",
+        "tool_output": {
+          "hits": [
+            {
+              "id": "email_014",
+              "sender": "ops.team@company.com",
+              "to": "you@company.com",
+              "subject": "System Migration - Need Your Inputs",
+              "timestamp": "2025-10-15T09:15:00",
+              "body": "We need your compatibility assessment for services affected by next week's system migration. Please send it by Thursday.",
+              "thread_id": "thread_014"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-20T21:00:56.081462Z",
+        "role": "user",
+        "text": "Show me all urgent emails",
+        "intent": "search",
+        "params": {
+          "query": "urgent emails"
+        }
+      },
+      {
+        "ts": "2025-11-20T21:00:56.083462Z",
+        "role": "assistant",
+        "text": "Found 0 matching emails.",
+        "tool_output": {
+          "hits": []
+        }
+      }
+    ]
+  },
+  "diag-session": {
+    "history": [
+      {
+        "ts": "2025-11-24T19:40:48.944161Z",
+        "role": "user",
+        "text": "hello from test",
+        "intent": "debug",
+        "params": {}
+      }
+    ]
+  },
+  "default-session": {
+    "history": [
+      {
+        "ts": "2025-11-24T20:03:59.560176Z",
+        "role": "user",
+        "text": "Draft an email to accept invitation in a friendly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-24T20:03:59.570203Z",
+        "role": "assistant",
+        "text": "Hi,\n\nThanks for the invitation! I'll be attending the townhall on Friday. Looking forward to it.",
+        "tool_output": {
+          "draft": "Hi,\n\nThanks for the invitation! I'll be attending the townhall on Friday. Looking forward to it."
+        }
+      },
+      {
+        "ts": "2025-11-24T20:15:24.431605Z",
+        "role": "user",
+        "text": "Draft an email to accept invitation in a friendly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-24T20:15:24.439141Z",
+        "role": "assistant",
+        "text": "Hi,\n\nThanks for the invitation! I'll be attending the townhall on Friday. Looking forward to it.",
+        "tool_output": {
+          "draft": "Hi,\n\nThanks for the invitation! I'll be attending the townhall on Friday. Looking forward to it."
+        }
+      }
+    ]
+  },
+  "swagato-session-1": {
+    "history": [
+      {
+        "ts": "2025-11-24T20:29:21.937877Z",
+        "role": "user",
+        "text": "Draft an email accepting the invitation in a friendly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "query": "accepting the invitation",
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-24T20:29:21.945809Z",
+        "role": "assistant",
+        "text": "Subject: Re: Leadership Townhall Invitation\n\nThanks for the invitation! I'll be there on Friday.",
+        "tool_output": {
+          "draft": "Subject: Re: Leadership Townhall Invitation\n\nThanks for the invitation! I'll be there on Friday."
+        }
+      }
+    ]
+  }
+}
