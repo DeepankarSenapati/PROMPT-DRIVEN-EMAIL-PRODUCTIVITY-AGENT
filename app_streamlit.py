@@ -105,7 +105,6 @@ with col1:
                     "intent": "error",
                 }
 
-    # Display draft actions if we have a draft in session state
     if 'current_draft' in st.session_state and st.session_state['current_draft']:
         st.markdown("---")
         st.markdown("#### Draft actions")
@@ -129,18 +128,15 @@ with col1:
             if saved.get('id'):
                 st.success(f"✅ Saved draft {saved.get('id')}")
                 st.json(saved)
-                # Force a rerun to refresh the drafts list below
                 st.rerun()
             else:
                 st.error("❌ Failed to save draft")
                 st.json(saved)
 
-        # Mock send (saves first, then marks as sent and logs)
         if col_send.button("📧 Mock send"):
             from agent import save_draft, mock_send_draft
             email_id = st.session_state.get('current_draft_email_id')
             
-            # Save first (so we have an id)
             saved = save_draft(email_id=email_id, draft_text=edited, saved_by="you@company.com")
             
             if saved.get('id'):
@@ -185,10 +181,6 @@ with col1:
                 st.markdown(f"**Agent @ {ts}:** {entry.get('text')}")
                 if entry.get("tool_output"):
                     st.json(entry.get("tool_output"))
-
-    # ----------------------
-    # Saved Drafts Manager
-    # ----------------------
     st.markdown("---")
     st.subheader("📝 Saved drafts")
 
@@ -206,7 +198,6 @@ with col1:
             created = d.get('created_at', '')
             is_sent = d.get('sent', False)
             
-            # Color code sent vs unsent
             status_emoji = "✅" if is_sent else "📝"
             status_text = "SENT" if is_sent else "Draft"
             
@@ -221,7 +212,6 @@ with col1:
 
                 cols = st.columns([1, 1, 1, 1])
 
-                # Mock Send (only if not already sent)
                 if not is_sent:
                     if cols[0].button("📧 Mock send", key=f"mock_{draft_id}"):
                         attach_example = [ASSIGNMENT_PATH] if Path(ASSIGNMENT_PATH).exists() else []
@@ -236,7 +226,6 @@ with col1:
                 else:
                     cols[0].write("Already sent ✅")
 
-                # Delete Draft
                 if cols[1].button("🗑️ Delete", key=f"del_{draft_id}"):
                     res = delete_draft(draft_id)
                     if res.get("status") == "deleted":
@@ -246,11 +235,9 @@ with col1:
                         st.error("❌ Delete failed")
                         st.json(res)
 
-                # Metadata
                 cols[2].write(f"**Sent:** {is_sent}")
                 if is_sent and d.get("sent_at"):
                     cols[3].write(f"**Sent at:** {d.get('sent_at')}")
-
 
 st.markdown("---")
 st.caption("Advanced Agent — supports summarization, extraction, drafting, search, and memory.")

@@ -4,148 +4,143 @@
     "category": "To-Do",
     "extracted_actions": [
       {
-        "task": "schedule a 30-minute sync this Wednesday to review the backend API progress",
+        "task": "Schedule a 30-minute sync this Wednesday to review the backend API progress",
         "deadline": null,
         "assignee": null
       },
       {
-        "task": "Let Alice know your availability",
+        "task": "Let Alice Johnson know your availability",
         "deadline": null,
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_002",
     "category": "Newsletter",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_003",
     "category": "Spam",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_004",
-    "category": "Important",
+    "category": "To-Do",
     "extracted_actions": [
       {
-        "task": "prepare the Q4 competitor analysis report",
-        "deadline": "2025-10-20",
-        "assignee": null
-      },
-      {
-        "task": "Include pricing updates and customer segmentation in the report",
+        "task": "Prepare the Q4 competitor analysis report including pricing updates and customer segmentation",
         "deadline": "2025-10-20",
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_005",
     "category": "Project Update",
     "extracted_actions": [
       {
-        "task": "update your documentation",
+        "task": "Update your documentation",
         "deadline": null,
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_006",
     "category": "To-Do",
     "extracted_actions": [
       {
-        "task": "Confirm attendance to the HR roundtable",
+        "task": "confirm attendance for HR roundtable",
         "deadline": "2025-10-10",
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_007",
     "category": "Newsletter",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_008",
     "category": "Spam",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_009",
     "category": "To-Do",
     "extracted_actions": [
       {
-        "task": "Send the updated design mockups",
+        "task": "send updated design mockups",
         "deadline": "2025-10-12",
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_010",
     "category": "Newsletter",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_011",
     "category": "Important",
     "extracted_actions": [
       {
-        "task": "Attend the quarterly leadership townhall",
+        "task": "Attend quarterly leadership townhall",
         "deadline": "2025-10-17",
-        "assignee": "you"
+        "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_012",
     "category": "Newsletter",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_013",
     "category": "Spam",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_014",
     "category": "To-Do",
     "extracted_actions": [
       {
-        "task": "Send compatibility assessment for services affected by next week's system migration",
+        "task": "Send compatibility assessment for services affected by system migration",
         "deadline": "2025-10-23",
-        "assignee": "you"
+        "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_015",
-    "category": "To-Do",
+    "category": "Project Update",
     "extracted_actions": [
       {
-        "task": "Integrate the insights from the updated client feedback summary into your presentation",
+        "task": "Integrate client feedback insights into presentation",
         "deadline": null,
-        "assignee": "you"
+        "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_016",
@@ -157,23 +152,23 @@
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_017",
     "category": "Project Update",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_018",
     "category": "Newsletter",
     "extracted_actions": [],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_019",
-    "category": "To-Do",
+    "category": "Important",
     "extracted_actions": [
       {
         "task": "Update system password",
@@ -181,7 +176,7 @@
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   },
   {
     "email_id": "email_020",
@@ -193,6 +188,6 @@
         "assignee": null
       }
     ],
-    "processed_at": "2025-11-24T17:33:07.415826Z"
+    "processed_at": "2025-11-25T21:48:51.462602Z"
   }
 ]

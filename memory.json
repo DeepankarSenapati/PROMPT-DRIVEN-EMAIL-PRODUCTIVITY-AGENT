@@ -608,5 +608,427 @@
         }
       }
     ]
+  },
+  "final-session-1": {
+    "history": [
+      {
+        "ts": "2025-11-25T21:06:31.635911Z",
+        "role": "user",
+        "text": "Summarise this email",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_001"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:06:31.640614Z",
+        "role": "assistant",
+        "text": "Here are the summaries of the email at different lengths:\n\n**Short:**\nRequesting a 30-",
+        "tool_output": {
+          "summary": "Here are the summaries of the email at different lengths:\n\n**Short:**\nRequesting a 30-"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:07:32.873529Z",
+        "role": "user",
+        "text": "Summarise this email",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:07:32.878457Z",
+        "role": "assistant",
+        "text": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** Leaders are required to attend the quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to a mandatory quarterly leadership townhall. The event is scheduled for this Friday at 4 PM, and attendance is",
+        "tool_output": {
+          "summary": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** Leaders are required to attend the quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to a mandatory quarterly leadership townhall. The event is scheduled for this Friday at 4 PM, and attendance is"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:09:57.053266Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "list_actions",
+        "params": {}
+      },
+      {
+        "ts": "2025-11-25T21:09:57.059314Z",
+        "role": "assistant",
+        "text": "Found 12 total action(s) across all processed emails:\n\n1. [email_001] Schedule a 30-minute sync this Wednesday to review the backend API progress\n2. [email_001] Let Alice Johnson know your availability\n3. [email_004] Prepare the Q4 competitor analysis report including pricing updates and customer segmentation (Deadline: 2025-10-20)\n4. [email_005] Update your documentation\n5. [email_006] Confirm attendance for the HR roundtable (Deadline: 2025-10-11)\n6. [email_009] Send the updated design mockups (Deadline: 2025-10-12)\n7. [email_011] Attend quarterly leadership townhall (Deadline: 2025-10-18)\n8. [email_014] Send compatibility assessment for services affected by system migration (Deadline: 2025-10-23)\n9. [email_015] Integrate client feedback insights into presentation\n10. [email_016] RSVP for the annual team-building retreat\n11. [email_019] Update system password (Deadline: 2025-10-15)\n12. [email_020] Clean and format the sales dataset (Deadline: 2025-10-16)\n",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "Schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": null
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let Alice Johnson know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "Prepare the Q4 competitor analysis report including pricing updates and customer segmentation",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_005",
+              "task": "Update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "Confirm attendance for the HR roundtable",
+              "deadline": "2025-10-11"
+            },
+            {
+              "email_id": "email_009",
+              "task": "Send the updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend quarterly leadership townhall",
+              "deadline": "2025-10-18"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate client feedback insights into presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the annual team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-25T21:11:25.532682Z",
+        "role": "user",
+        "text": "Is this meeting mandatory? ",
+        "intent": "other",
+        "params": {
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:11:25.538082Z",
+        "role": "assistant",
+        "text": "Yes, attendance is mandatory. (\"Attendance is mandatory.\")",
+        "tool_output": {
+          "answer": "Yes, attendance is mandatory. (\"Attendance is mandatory.\")"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:12:58.505531Z",
+        "role": "user",
+        "text": "Draft a reply accepting the invitation in a firndly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "query": "accepting the invitation",
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:12:58.511064Z",
+        "role": "assistant",
+        "text": "Subject: Re: Leadership Townhall Invitation\n\nHi,\n\nThanks for the invitation! I've added it to my calendar and will be there.\n\nBest,\n[Your Name]",
+        "tool_output": {
+          "draft": "Subject: Re: Leadership Townhall Invitation\n\nHi,\n\nThanks for the invitation! I've added it to my calendar and will be there.\n\nBest,\n[Your Name]"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:29:10.367272Z",
+        "role": "user",
+        "text": "\nSummarise this email\n",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_001"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:29:10.371271Z",
+        "role": "assistant",
+        "text": "Here are the summaries of the email at different lengths:\n\n**Short:**\nRequesting a 30-",
+        "tool_output": {
+          "summary": "Here are the summaries of the email at different lengths:\n\n**Short:**\nRequesting a 30-"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:30:07.394190Z",
+        "role": "user",
+        "text": "\nSummarise this email\n",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:30:07.397190Z",
+        "role": "assistant",
+        "text": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** Leaders are required to attend the quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to a mandatory quarterly leadership townhall. The event is scheduled for this Friday at 4 PM, and attendance is",
+        "tool_output": {
+          "summary": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** Leaders are required to attend the quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to a mandatory quarterly leadership townhall. The event is scheduled for this Friday at 4 PM, and attendance is"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:31:32.574257Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "list_actions",
+        "params": {}
+      },
+      {
+        "ts": "2025-11-25T21:31:32.577256Z",
+        "role": "assistant",
+        "text": "Found 12 total action(s) across all processed emails:\n\n1. [email_001] Schedule a 30-minute sync this Wednesday to review the backend API progress\n2. [email_001] Let Alice Johnson know your availability\n3. [email_004] Prepare the Q4 competitor analysis report including pricing updates and customer segmentation (Deadline: 2025-10-20)\n4. [email_005] Update your documentation\n5. [email_006] confirm attendance for HR roundtable (Deadline: 2025-10-10)\n6. [email_009] send updated design mockups (Deadline: 2025-10-12)\n7. [email_011] Attend quarterly leadership townhall (Deadline: 2025-10-18)\n8. [email_014] Send compatibility assessment for services affected by system migration (Deadline: 2025-10-23)\n9. [email_015] Integrate client feedback insights into presentation\n10. [email_016] RSVP for the annual team-building retreat\n11. [email_019] Update system password (Deadline: 2025-10-15)\n12. [email_020] Clean and format the sales dataset (Deadline: 2025-10-16)\n",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "Schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": null
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let Alice Johnson know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "Prepare the Q4 competitor analysis report including pricing updates and customer segmentation",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_005",
+              "task": "Update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "confirm attendance for HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "send updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend quarterly leadership townhall",
+              "deadline": "2025-10-18"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate client feedback insights into presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the annual team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-25T21:32:50.828087Z",
+        "role": "user",
+        "text": "Is this meeting mandatory?",
+        "intent": "other",
+        "params": {}
+      },
+      {
+        "ts": "2025-11-25T21:32:50.831086Z",
+        "role": "assistant",
+        "text": "I cannot answer this question as the email content was not provided.",
+        "tool_output": {
+          "answer": "I cannot answer this question as the email content was not provided."
+        }
+      },
+      {
+        "ts": "2025-11-25T21:33:02.176136Z",
+        "role": "user",
+        "text": "Is this meeting mandatory?",
+        "intent": "other",
+        "params": {
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:33:02.181126Z",
+        "role": "assistant",
+        "text": "Yes, it is. \"Attendance is mandatory.\"",
+        "tool_output": {
+          "answer": "Yes, it is. \"Attendance is mandatory.\""
+        }
+      },
+      {
+        "ts": "2025-11-25T21:33:39.163190Z",
+        "role": "user",
+        "text": "Draft a reply accepting the invitation in a friendly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:33:39.166190Z",
+        "role": "assistant",
+        "text": "Subject: Re: Leadership Townhall Invitation\n\nHi,\n\nThanks for the invitation! I've added it to my calendar and will be there.\n\nBest,\n[Your Name]",
+        "tool_output": {
+          "draft": "Subject: Re: Leadership Townhall Invitation\n\nHi,\n\nThanks for the invitation! I've added it to my calendar and will be there.\n\nBest,\n[Your Name]"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:50:23.138385Z",
+        "role": "user",
+        "text": "Summarise this email",
+        "intent": "summarize",
+        "params": {
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:50:23.141386Z",
+        "role": "assistant",
+        "text": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** You are invited to a mandatory quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to the mandatory quarterly leadership townhall, scheduled for this Friday at 4 PM.",
+        "tool_output": {
+          "summary": "Here are the summaries based on your length options:\n\n*   **Short:** Mandatory leadership townhall this Friday at 4 PM.\n*   **Medium:** You are invited to a mandatory quarterly leadership townhall this Friday at 4 PM.\n*   **Detailed:** The email invites recipients to the mandatory quarterly leadership townhall, scheduled for this Friday at 4 PM."
+        }
+      },
+      {
+        "ts": "2025-11-25T21:52:55.626518Z",
+        "role": "user",
+        "text": "What are the tasks here?",
+        "intent": "list_actions",
+        "params": {}
+      },
+      {
+        "ts": "2025-11-25T21:52:55.630503Z",
+        "role": "assistant",
+        "text": "Found 12 total action(s) across all processed emails:\n\n1. [email_001] Schedule a 30-minute sync this Wednesday to review the backend API progress\n2. [email_001] Let Alice Johnson know your availability\n3. [email_004] Prepare the Q4 competitor analysis report including pricing updates and customer segmentation (Deadline: 2025-10-20)\n4. [email_005] Update your documentation\n5. [email_006] confirm attendance for HR roundtable (Deadline: 2025-10-10)\n6. [email_009] send updated design mockups (Deadline: 2025-10-12)\n7. [email_011] Attend quarterly leadership townhall (Deadline: 2025-10-17)\n8. [email_014] Send compatibility assessment for services affected by system migration (Deadline: 2025-10-23)\n9. [email_015] Integrate client feedback insights into presentation\n10. [email_016] RSVP for the team-building retreat\n11. [email_019] Update system password (Deadline: 2025-10-15)\n12. [email_020] Clean and format the sales dataset (Deadline: 2025-10-16)\n",
+        "tool_output": {
+          "actions": [
+            {
+              "email_id": "email_001",
+              "task": "Schedule a 30-minute sync this Wednesday to review the backend API progress",
+              "deadline": null
+            },
+            {
+              "email_id": "email_001",
+              "task": "Let Alice Johnson know your availability",
+              "deadline": null
+            },
+            {
+              "email_id": "email_004",
+              "task": "Prepare the Q4 competitor analysis report including pricing updates and customer segmentation",
+              "deadline": "2025-10-20"
+            },
+            {
+              "email_id": "email_005",
+              "task": "Update your documentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_006",
+              "task": "confirm attendance for HR roundtable",
+              "deadline": "2025-10-10"
+            },
+            {
+              "email_id": "email_009",
+              "task": "send updated design mockups",
+              "deadline": "2025-10-12"
+            },
+            {
+              "email_id": "email_011",
+              "task": "Attend quarterly leadership townhall",
+              "deadline": "2025-10-17"
+            },
+            {
+              "email_id": "email_014",
+              "task": "Send compatibility assessment for services affected by system migration",
+              "deadline": "2025-10-23"
+            },
+            {
+              "email_id": "email_015",
+              "task": "Integrate client feedback insights into presentation",
+              "deadline": null
+            },
+            {
+              "email_id": "email_016",
+              "task": "RSVP for the team-building retreat",
+              "deadline": null
+            },
+            {
+              "email_id": "email_019",
+              "task": "Update system password",
+              "deadline": "2025-10-15"
+            },
+            {
+              "email_id": "email_020",
+              "task": "Clean and format the sales dataset",
+              "deadline": "2025-10-16"
+            }
+          ]
+        }
+      },
+      {
+        "ts": "2025-11-25T21:54:25.067770Z",
+        "role": "user",
+        "text": "Draft a reply accepting the invitation in a friendly tone.",
+        "intent": "draft_reply",
+        "params": {
+          "query": "accepting the invitation",
+          "tone": "friendly",
+          "email_id": "email_011"
+        }
+      },
+      {
+        "ts": "2025-11-25T21:54:25.073768Z",
+        "role": "assistant",
+        "text": "Subject: Re: Leadership Townhall Invitation\n\nThanks for the invitation! I'll be there on Friday.",
+        "tool_output": {
+          "draft": "Subject: Re: Leadership Townhall Invitation\n\nThanks for the invitation! I'll be there on Friday."
+        }
+      }
+    ]
   }
 }

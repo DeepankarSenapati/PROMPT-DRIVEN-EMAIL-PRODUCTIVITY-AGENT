@@ -16,7 +16,7 @@ from llm_client import call_gemini_text, call_gemini_structured
 ROOT = os.getcwd()
 INBOX_PATH = os.path.join(ROOT, "mock_inbox.json")
 PROMPTS_PATH = os.path.join(ROOT, "prompts.json")
-MEMORY_PATH = os.path.join(ROOT, "memory.json")  # stores chat histories per session/email
+MEMORY_PATH = os.path.join(ROOT, "memory.json")  
 PROCESSED_PATH = os.path.join(ROOT, "processed_outputs.json")
 DRAFTS_PATH = os.path.join(ROOT, "drafts.json")
 SENT_LOG = os.path.join(ROOT, "logs", "mock_sent.log")
@@ -50,9 +50,6 @@ def save_memory(mem: Dict[str, Any]):
     with open(MEMORY_PATH, "w", encoding="utf-8") as f:
         json.dump(mem, f, indent=2, ensure_ascii=False)
 
-# --------------------
-# Helper: Find email by ID (case-insensitive, robust)
-# --------------------
 def find_email_by_id(email_id: Optional[str]) -> Optional[Dict[str, Any]]:
     """
     Find an email by ID with robust matching.
@@ -69,9 +66,6 @@ def find_email_by_id(email_id: Optional[str]) -> Optional[Dict[str, Any]]:
             return email
     
     return None
-# --------------------
-# Tools (functions the agent may call)
-# --------------------
 
 def tool_summarize(email_id: str, length: str = "short") -> Dict[str, str]:
     """
@@ -345,10 +339,6 @@ def tool_list_actions() -> Dict[str, Any]:
             actions_map.append({"email_id": p["email_id"], "task": a.get("task"), "deadline": a.get("deadline")})
     return {"actions": actions_map}
 
-# --------------------
-# Draft persistence + mock-send (robust)
-# --------------------
-
 def _ensure_drafts_file():
     """Ensure drafts.json exists and is initialized as an array."""
     try:
@@ -461,10 +451,6 @@ def mock_send_draft(draft_id: str, sender: str = "you@company.com", attach_urls:
 
     return {"status": "mock_sent", "draft_id": draft_id, "sent_at": found.get("sent_at"), "attach_urls": attach_urls or []}
 
-# --------------------
-# Routing + intent detection
-# --------------------
-
 INTENT_PROMPT = PROMPTS.get("intent_detection_v1", {}).get("template", 
     "You are an intent classifier. Given the user message, classify intent as one of: summarize, extract_actions, draft_reply, search, list_actions, other. Respond with a single JSON: {\"intent\":\"...\",\"params\":{}}. Params may include email_id, query, tone, length.")
 
@@ -502,10 +488,6 @@ def detect_intent(user_text: str) -> Dict[str, Any]:
         return {"intent": "other", "params": {}}
 
 
-# --------------------
-# Conversation memory
-# --------------------
-
 def append_to_memory(session_id: str, message: Dict[str, Any]):
     mem = load_memory()
     if session_id not in mem:
@@ -517,10 +499,6 @@ def get_memory(session_id: str, limit: int = 10) -> List[Dict[str, Any]]:
     mem = load_memory()
     hist = mem.get(session_id, {}).get("history", [])
     return hist[-limit:]
-
-# --------------------
-# Main orchestrator
-# --------------------
 
 def handle_user_message(session_id: str, user_text: str, selected_email_id: Optional[str] = None) -> Dict[str, Any]:
     """
@@ -535,7 +513,6 @@ def handle_user_message(session_id: str, user_text: str, selected_email_id: Opti
     print(f"   selected_email_id: {repr(selected_email_id)}")
     print(f"{'='*60}\n")
 
-    # ----- SAFE DEFAULTS -----
     intent = "other"
     params: Dict[str, Any] = {}
 

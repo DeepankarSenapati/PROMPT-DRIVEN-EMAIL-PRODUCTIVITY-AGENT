@@ -1,4 +1,3 @@
-# ingest.py (batched + robust safe parsing)
 import json
 import time
 import traceback
@@ -7,19 +6,16 @@ from typing import Any, Dict
 
 from llm_client import call_gemini_text, call_gemini_structured
 
-# ----------------- CONFIG -----------------
 MOCK_INBOX_PATH = "mock_inbox.json"
 PROMPTS_PATH = "prompts.json"
 OUTPUT_PATH = "processed_outputs.json"
 
-# ----------------- LOAD DATA -----------------
 with open(MOCK_INBOX_PATH, "r", encoding="utf-8") as f:
     emails = json.load(f)
 
 with open(PROMPTS_PATH, "r", encoding="utf-8") as f:
     prompts = json.load(f)["prompts"]
 
-# ----------------- SCHEMA -----------------
 action_item_schema = {
     "type": "object",
     "properties": {
@@ -48,8 +44,6 @@ batch_schema = {
     }
 }
 
-
-# ----------------- SANITIZATION HELPERS -----------------
 def sanitize_text_output(raw: str):
     """
     Removes Gemini SDK repr outputs such as:
@@ -105,8 +99,6 @@ def try_parse_json_from_text(raw: str):
     except Exception:
         return None
 
-
-# ----------------- BATCH MODE -----------------
 def build_batch_prompt(emails_list):
     cat_template = prompts["categorization_v1"]["template"]
     action_template = prompts["action_extraction_v1"]["template"]
@@ -156,11 +148,9 @@ def run_batch_chunked(chunk_size=5):
         parsed = call_gemini_structured(prompt, json_schema=batch_schema, temperature=0.0, max_output_tokens=4096)
         if parsed is None or not isinstance(parsed, list):
             print("Chunk failed or returned invalid JSON; falling back to per-email for that chunk.")
-            # fallback: process this chunk per-email
+
             for e in chunk:
-                # reuse the per-email logic (you can call a helper function here)
-                # For brevity call existing per-email route by wrapping a single-email list
-                # (simpler: append an Error record so it doesn't stop whole run)
+               
                 all_results.append({
                     "email_id": e["id"],
                     "category": "Unknown",
@@ -184,7 +174,6 @@ def run_batch_chunked(chunk_size=5):
     print(f"Wrote {len(normalized)} results to {OUTPUT_PATH}")
     return True
 
-# ----------------- PER EMAIL (fallback) -----------------
 def run_per_email(rate_limit_seconds=6.0):
     print("Running per-email fallback with", rate_limit_seconds, "sec delay per email.")
 
@@ -195,7 +184,6 @@ def run_per_email(rate_limit_seconds=6.0):
 
         email_text = f"Subject: {e['subject']}\n\n{e['body']}"
 
-        # ---- CATEGORY ----
         cat_prompt = (
             prompts["categorization_v1"]["template"]
             + "\n\nEmail:\n"
@@ -207,7 +195,6 @@ def run_per_email(rate_limit_seconds=6.0):
         cat_text = sanitize_text_output(cat_raw)
         category = cat_text.strip() if cat_text else "Unknown"
 
-        # ---- ACTION EXTRACTION ----
         action_prompt = (
             prompts["action_extraction_v1"]["template"]
             + "\n\nEmail:\n"
@@ -241,7 +228,6 @@ def run_per_email(rate_limit_seconds=6.0):
     print("Per-email ingestion complete.")
 
 
-# ----------------- ENTRYPOINT -----------------
 if __name__ == "__main__":
     success = run_batch_chunked()
     if not success:

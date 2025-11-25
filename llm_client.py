@@ -10,13 +10,11 @@ from typing import Any, Dict, Optional
 
 import google.generativeai as genai
 
-# Ensure GEMINI_API_KEY is present
 API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise ValueError("GEMINI_API_KEY not found in environment! Make sure .env is present and loaded.")
 genai.configure(api_key=API_KEY)
 
-# Default model (you can change to "gemini-1.5-flash" to reduce quotas/costs)
 MODEL = "gemini-2.5-flash"
 
 
@@ -78,7 +76,6 @@ def _extract_text_from_response(response) -> Optional[str]:
         # safe to swallow and continue searching other fields
         pass
 
-    # 2) response.result / response.result.candidates (many SDKs use `.result`)
     try:
         res = getattr(response, "result", None)
         if res:
@@ -99,7 +96,6 @@ def _extract_text_from_response(response) -> Optional[str]:
     except Exception:
         pass
 
-    # 3) new-style 'output' field: list of parts
     try:
         out = getattr(response, "output", None)
         if out and isinstance(out, (list, tuple)) and len(out) > 0:
@@ -119,7 +115,6 @@ def _extract_text_from_response(response) -> Optional[str]:
     except Exception:
         pass
 
-    # 4) older SDK shapes: response.candidates
     try:
         candidates = getattr(response, "candidates", None) or (response.get("candidates") if isinstance(response, dict) else None)
         if candidates and len(candidates) > 0:
@@ -170,7 +165,6 @@ def call_gemini_text(prompt: str,
         except Exception:
             pass
 
-        # include short repr for debugging but do not return it as normal text (raise instead)
         try:
             diag["repr"] = str(response)[:1000]
         except Exception:
